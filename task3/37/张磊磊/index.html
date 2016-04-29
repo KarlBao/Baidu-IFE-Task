@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/style.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body style = "padding:20px;">
+	<button class="btn1">alter弹出</button>
+	<button class="btn2">confirm弹出</button>
+	<button class="btn3">alter弹出（确认回调）</button>
+	<button class="btn4">confirm弹出（确认&取消回调）</button>
+	<script src="js/task37.js"></script>
+	<script>
+		//回调方式
+		$('.btn1').on('click',function(){
+			 Dialog.open({
+			    message: 'hello world',
+			    isShowCloseBtn: false,
+  			});
+		})
+		$('.btn2').on('click',function(){
+			console.log(1)
+			 Dialog.open({
+			    message: 'hello world',
+			    isShowCloseBtn: true,
+  			});
+		})
+		$('.btn3').on('click',function(){
+			 Dialog.open({
+			    message: '<ul><li>1</li><li>2</li><li>3</li></ul>',
+			    isShowCloseBtn: false,
+			    onConfirm: function(){
+			    	alert(1);
+			    }
+  			});
+		})
+		$('.btn4').on('click',function(){
+			 Dialog.open({
+			    message: 'hello world',
+			    isShowCloseBtn: true,
+			    onClose: function(){
+			    	alert(1);
+			    },
+	      		onConfirm: function(){
+	      			alert(1);
+	      		}
+  			});
+		})		
+	</script>
+</body>
+</html>
