@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery1.12.2.min.js"></script>
+	<script type="text/javascript" src="adapter.js"></script>
+	<script type="text/javascript" src="spaceship.js"></script>
+	<script type="text/javascript" src="bus.js"></script>
+	<script type="text/javascript" src="digitalcenter.js"></script>
+	<script type="text/javascript" src="task.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="space">
+		<div id="planet"></div>
+	</div>
+	<div id="panels">
+		<div id="log-panel"></div>
+		<div id="control-panel">
+			<div id="ship-panel-container">
+			</div>
+			<hr/>		
+			<form class="engine-form">
+				<label>动力系统选择：</label> <br/>
+				<input type="radio" name="engine" value="level_1" checked>前进号（速率30px/s，能耗5%/s）<br/>
+				<input type="radio" name="engine" value="level_2">奔腾号（速率50px/s，能耗7%/s）<br/>
+				<input type="radio" name="engine" value="level_3">超越号（速率80px/s，能耗9%/s）
+			</form>
+			<form class="energy-form">
+				<label>能源系统选择：</label> <br/>
+				<input type="radio" name="energy" value="level_1" checked>劲量型（补充能源速率2%/s）<br/>
+				<input type="radio" name="energy" value="level_2">光能型（补充能源速率3%/s）<br/>
+				<input type="radio" name="energy" value="level_3">永久型（补充能源速率5%/s）
+			</form>
+			<button id="launch-btn">发射飞船</button>
+		</div>
+	</div>
+	<div id="monitor">
+
+	</div>
+</body>
+</html>
